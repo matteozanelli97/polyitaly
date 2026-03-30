@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-base: #fafaf8;
+  --bg-elevated: #ffffff;
+  --bg-surface: #f3f3ef;
+  --bg-overlay: #eaeae4;
+  --border-subtle: rgba(0,0,0,0.05);
+  --border-default: rgba(0,0,0,0.09);
+  --border-strong: rgba(0,0,0,0.15);
+  --text-primary: #141418;
+  --text-secondary: #6b6a7d;
+  --text-tertiary: #a8a7b8;
+  --accent-primary: #5b4fd4;
+  --accent-green: #0d9469;
+  --accent-red: #d94535;
+  --accent-amber: #c27d0e;
+  --accent-blue: #2563eb;
+  --accent-muted: rgba(91,79,212,0.08);
+}
+
+.dark {
+  --bg-base: #08080c;
+  --bg-elevated: #0f0f14;
+  --bg-surface: #16161d;
+  --bg-overlay: #1e1e27;
+  --border-subtle: rgba(255,255,255,0.06);
+  --border-default: rgba(255,255,255,0.10);
+  --border-strong: rgba(255,255,255,0.18);
+  --text-primary: #f4f3f8;
+  --text-secondary: #8e8da0;
+  --text-tertiary: #4a4960;
+  --accent-primary: #7c6ff7;
+  --accent-green: #2dd4a0;
+  --accent-red: #f4685a;
+  --accent-amber: #f5a623;
+  --accent-blue: #5b9cf6;
+  --accent-muted: rgba(124,111,247,0.12);
+}
+
+body {
+  color: var(--text-primary);
+  background: var(--bg-base);
+  font-family: "Geist", system-ui, sans-serif;
+}
+
+@keyframes ticker-scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-ticker {
+  animation: ticker-scroll 60s linear infinite;
+}
+
+@keyframes odds-fill {
+  from { width: 50%; }
+}
+
+.animate-odds {
+  animation: odds-fill 300ms ease-out;
+}
+
+@layer utilities {
+  .font-tabular {
+    font-variant-numeric: tabular-nums;
+  }
+}
